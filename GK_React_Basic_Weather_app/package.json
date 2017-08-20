@@ -5,15 +5,23 @@
   "main": "index.js",
   "scripts": {
     "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "ghpages",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server -p 7777"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
+    "ghpages": "0.0.3",
+    "history": "^1.17.0",
+    "http-server": "^0.8.5",
+    "jquery": "^2.2.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-router": "^1.0.3",
+    "segment-js": "^1.0.3",
     "watchify": "^3.6.1",
     "whatwg-fetch": "^0.10.1"
   }

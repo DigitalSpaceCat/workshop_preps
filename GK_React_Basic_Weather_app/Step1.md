@@ -1,3 +1,5 @@
+** This markup needs to be updated.
+
 # How React works?
 ### Let's bring 'Hello World' in a React way
 
@@ -23,38 +25,76 @@ React.createElement() and document.getElementById(), which is where you target t
 
 This takes ReactElement as the first argument. Other properties in an object is into the second argument.
 
-React.createElement('input');
+[React.createElement('input');
 // -> <input></input>
 React.createElement('input', { type: 'checkbox' });
 // -> <input type="checkbox"></input>
 React.createElement('input', { className: 'heading', type: 'checkbox' });
-// -> <input class="heading" type="checkbox"></input>
+// -> <input class="heading" type="checkbox"></input>]
 
-* Please note that React does use className instead of class. If you forget this, the react library wouldn't compile your code!
+_Please note that React does use className instead of class. If you forget this, the react library wouldn't compile your code!_
 
 ### What is Components?
 
+Thinking this way, Component is a block you can build the UIs. Like LEGO, you can assemble those blocks independently.
+Even further, you can reuse this. The structure and rendering process is like JS function. Therefore, Components accept inputs (called "props")
+
+https://react.jsbin.com/pevecij/1/edit?html,js,output
+
+What is in this component? We write a function that returns a ReactElement and then pass it to inside of React.createElement as an argument.
+
+Look at this example. 
+
+https://jsbin.com/donozib/1/edit?html,js,output
+
+We made a react class called "Wrapper". This Wrapper return a heading "Hello From React".
+And then, we stored our target element into [let target]
+
+Once all elements are ready, we render our component class name. We put Wrapper as our argument and put target as a second argument to note where to be rendered. 
+Congratulation! You successfully created your first react component!
+
+If you stuck, you are most welcomed to read the official site.
+https://facebook.github.io/react/docs/components-and-props.html
+
+This is the best material helping you understand React better.
 
 
+### What is JSX?
 
+From your component, you see render() methods in your React component. 
+This mark up is called JSX. Like this: 
 
+[class RobotBox extends React.Component {
+  render() {
+    return (
+      <div>
+      
+      </div>
+    );
+  }
+}]
 
-// NPM command you should know at least.
-// What is JSX?
+Nothing much you do need to worry about. Just make sure that any html element should be wrapped with <div>.
+Otherwise, you will see compiling error. 
 
-// Why we have to use className? ** The custom rules of React
+What's interesting in JSX? It allows you to put variables dynamically into your HTML element. 
+If you studied Vue.js or Angular, you would recognise similar curly brackets within markup syntax. 
 
-// Install React Dev tool
+http://jsbin.com/futihal/1/edit?js,output
 
-// Syntax flags you shouldn't do!
+In this JS Bin, We declared PI within const pi. By passing this variable into the curly bracket, you can print the pi within the rendered HTML elements. 
+If you look at the this JS bin, you would also reckon that the css class declaration is slightly different. 
 
-// What is props and state?
-// << Have to draw some doodles to explain. The details of processes will be led on Step2
+Instead of "class", the declaration should be "className". This is React convention to follow. 
 
-// If the drawing explanation is going to be, plug the blog links of mine.
+### How to iterate key items within JSX?
 
+Using the map() method on the topics array, you can enlist each of items into the list. 
+In the jsbin, the map method accesses to the topics array and grabs each of item to iterate. 
 
+As you see, the key is allocated to each of items and rendered into curly braces. 
 
+http://jsbin.com/zadogut/1/edit?js,output
 
 
 
