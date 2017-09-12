@@ -73,7 +73,7 @@
 // https://jsfiddle.net/mrsmaveric/7smsqv3h/2/
 
 
-// ## 2.2 Handling data fetches with state ##
+// ## 2.2 Handling data update with setState ##
 
 // Unlike state, props are mainly about tossing data object to return and render. That is why we only on read props but not able to update. 
 // What if you want to update data and update values on your end based on your event controls? 
@@ -211,5 +211,14 @@
 
 // state {deadline: "December 25, 2017", typedDeadline: "September 25, 2017"}deadline: "December 25, 2017"typedDeadline: "September 25, 2017"__proto__: Object
 // This means that your input field changed typedDeadline status as you input and the submitting button triggerd to change deadline state object. 
+
+// Are you stuck? Sneak in this codepen for seconds. Do not copy whole into your pen though!
+// https://codepen.io/space-cat/pen/LjqMgy/?editors=0010
+
+
+// ## 2.3 Let's combine props and state together! ##
+
+
+
 
 
