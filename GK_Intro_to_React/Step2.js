@@ -7,7 +7,8 @@
 // Remember. React is component oriented library. Thinking how you will wrap up your components effectively.
 
 // In this section, We will make the countdown chant. What is this? It is literally counting down view until Christmas!
-
+// Reference 1: https://medium.com/@khwsc1/creating-timer-app-with-react-js-part-1-401d4af6e4fb
+// Reference 2: http://www.kristin-baumann.com/tech/react-countdown/
 // ## 2.1 What is props and when we have to use it?
 // What we learn this first section, you will briefly have an idea of props. 
 // Comparing to state, props are faily easy to understand.
@@ -133,6 +134,49 @@
         //  deadline: 'December 25, 2018'
 //     });
 // }
+
+// Then, we have to call the method by event listener on rendered view. 
+// When user clicks button, It will trigger our changeDeadline() method and that will change our state objects.
+
+// 1. Copy and paste this App component while putting correct code into blankies (_______)
+// Also, change some of codes referring the explanation of state above. Leave the clock component as commented out yet. We won't use it now. 
+
+// _______ App extends _______.Component {
+//     render() {
+//       ________ (
+//         <div className="App">
+    //     <div className="App-title">Countdown to December 25, 2017</div>
+    //     <div>
+    //         <div>14 days</div>
+    //         <div>30 hours</div>
+    //         <div>15 minutes</div>
+    //         <div>20 seconds</div>
+    //     </div>
+    //     <div>
+    //         <input placeholder="new date"/>
+    //         <button>Submit</button>
+    //     </div>
+    //   </div>
+//       );
+//     }
+//   }
+
+// ReactDOM.render(<_______ />, document.getElementById('root'));
+// Congrats! You changed your state successfully!
+
+// So far this is one direction way to change your state. 
+// Hey, what happened to input field? Wasn't it supposed to put the dynamic date? 
+// That is exactly what we will go soon. Let's put new object inside of setState. Since the input field initally empty, we will put empty string. 
+
+
+// changeDeadline() {
+//     this.setState({
+        //  deadline: 'December 25, 2018'
+        //  typedDeadline: ''
+//     });
+// }
+
+
 
 
 
