@@ -1,5 +1,5 @@
 
-// Understand prop and state for your ongoing React Journey
+// # Understand prop and state for your ongoing React Journey #
 // The best tutorial you can find is FaceBook API. 
 // This website has everything that you seek for. 
 // https://facebook.github.io/react/tutorial/tutorial.html#overview
@@ -9,7 +9,9 @@
 // In this section, We will make the countdown chant. What is this? It is literally counting down view until Christmas!
 // Reference 1: https://medium.com/@khwsc1/creating-timer-app-with-react-js-part-1-401d4af6e4fb
 // Reference 2: http://www.kristin-baumann.com/tech/react-countdown/
-// ## 2.1 What is props and when we have to use it?
+
+
+// ## 2.1 What is props and when we have to use it? ##
 // What we learn this first section, you will briefly have an idea of props. 
 // Comparing to state, props are faily easy to understand.
 // Now we will talk about props. Every component receives a list of attributes, just like HTML elements. 
@@ -71,7 +73,7 @@
 // https://jsfiddle.net/mrsmaveric/7smsqv3h/2/
 
 
-// ## 2.2 Handling data fetches with state
+// ## 2.2 Handling data fetches with state ##
 
 // Unlike state, props are mainly about tossing data object to return and render. That is why we only on read props but not able to update. 
 // What if you want to update data and update values on your end based on your event controls? 
@@ -145,7 +147,7 @@
 //     render() {
 //       ________ (
 //         <div className="App">
-    //     <div className="App-title">Countdown to December 25, 2017</div>
+    //     <div className="App-title">Countdown to {this.______.deadline}</div>
     //     <div>
     //         <div>14 days</div>
     //         <div>30 hours</div>
@@ -154,7 +156,8 @@
     //     </div>
     //     <div>
     //         <input placeholder="new date"/>
-    //         <button>Submit</button>
+            // <button>Submit</button>
+    //         
     //     </div>
     //   </div>
 //       );
@@ -162,12 +165,17 @@
 //   }
 
 // ReactDOM.render(<_______ />, document.getElementById('root'));
+
+// 2. change the button to trigger right method by filling up a blanky. 
+// {<button __________={() => this.______________()}>Submit</button>}
+// hint : It is event listener when mouse is clicking "on".
+
 // Congrats! You changed your state successfully!
 
 // So far this is one direction way to change your state. 
 // Hey, what happened to input field? Wasn't it supposed to put the dynamic date? 
-// That is exactly what we will go soon. Let's put new object inside of setState. Since the input field initally empty, we will put empty string. 
-
+// That is exactly what we will go soon. Let's put new object inside of setState. 
+// Since the input field initally empty, we will put empty string. 
 
 // changeDeadline() {
 //     this.setState({
@@ -176,9 +184,32 @@
 //     });
 // }
 
+// then in the input field, we will put another event listner to trigger anonymous function. 
+//<input placeholder="new date"
+  //                 onChange= {event => console.log('event', event)}/>
+
+// Now the top right on the codepen, click the Change View and open the debug view in the new browser tab.
+// You will see that a lot of console log shows up at concole tab when you open the inspector on the debug view.
+// Well, let's track our events more precisely. 
+
+//Change our input with specific target.
+//<input placeholder="new date"
+  //                 onChange= {event => console.log('event', event._____.value)}/>
+  // hint: you have to target the value of the event. 
+
+// What you see on your console tab now? 
+
+// Our input field seems track what we type, heh? We can utilise this to setting our state object. 
+// Delete the part of console.log. Instead, fill up correct function to change our typedDeadline object. 
+
+//<input placeholder="new date"
+  //                 onChange= {event => this.___________( {typedDeadline: event._____.value})}/>
 
 
+// Type the another deadline date into input field and click the button.
+// Do you see this log? 
 
-
+// state {deadline: "December 25, 2017", typedDeadline: "September 25, 2017"}deadline: "December 25, 2017"typedDeadline: "September 25, 2017"__proto__: Object
+// This means that your input field changed typedDeadline status as you input and the submitting button triggerd to change deadline state object. 
 
 
