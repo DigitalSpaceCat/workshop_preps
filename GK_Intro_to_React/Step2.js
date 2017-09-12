@@ -82,10 +82,28 @@
 // Let's start by declaring a constructor() function on the App component. 
 // Remember, from inside the constructor() we must call super() as the very first thing.
 
-// Next, let's declare an Initial State to the Clock component by assigning it as an empty object.
+// To practice how state works, we will change our previous code. Comment out Clock component for now since we won't use that for while. 
+// We will bring it back again.
+
+// In side of your App component, put constructor.
+
+// constructor(props) {
+//     super(props);
+//     this.state = {
+//     }
+//   }
+
+// Next, let's declare an Initial State to the App component by assigning it as an empty object.
 // We declare the Initial State by setting this.state as an empty object.
 
-// Now, let's add a property to the newly created state object. Let's set days/hours/minutes/seconds.
+// constructor(props) {
+//     super(props);
+//     this.state = {
+        // deadline: 'December 25, 2017',
+        // newDeadline: ''
+//     }
+//   }
+
 
 // When writing a component in React that contains data that changes over time, it is considered a best practice to store this data in the component’s state.
 // How to properly access a component's state?
@@ -94,5 +112,29 @@
 
 // In order to create the initial state for a component, 
 // we must declare the property this.state as an object in the class constructor function.
+
+// Now it's time to conditionally change our deadline(which is Christmas!) based on the component state.
+// We have to make a method to change our object inside of the initial state. How? by setting new value into our state.
+// This is setState() function. By calling particular method, we are going to call setState() function. 
+
+// put the methoud below into the proper spot. 
+
+// changeDeadline() {
+//     this.setState();
+// }
+
+// You must never change your state directly. 
+// Bad example here => this.state.deadline = "September 25, 2018" -> never do that. 
+
+// Instead you have to wrapup the object you want to change inside of setState().
+
+// changeDeadline() {
+//     this.setState({
+        //  deadline: 'December 25, 2018'
+//     });
+// }
+
+
+
 
 
