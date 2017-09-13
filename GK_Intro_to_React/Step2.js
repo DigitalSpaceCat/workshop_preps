@@ -299,6 +299,16 @@
 //     </div>
 //   )
 
+// Alright. Now we can see some numbers we setup. Hanging there.
+// Now we got at least days countdown but have failed to get others. 
+// Why? Because the realtime second changing and our app doesn't seem to calculate. We will solve this at next step.
+
+
+// So how do you feel? Do you feel more confident now? 
+// If you stuck, have a sneaky look on this codepen. Only sneaky look though! 
+
+// https://codepen.io/space-cat/pen/QqWOXP?editors=0010
+
 
 
 
