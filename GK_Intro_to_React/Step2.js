@@ -1,14 +1,8 @@
 
 // # Understand prop and state for your ongoing React Journey #
-// The best tutorial you can find is FaceBook API. 
-// This website has everything that you seek for. 
-// https://facebook.github.io/react/tutorial/tutorial.html#overview
 
 // Remember. React is component oriented library. Thinking how you will wrap up your components effectively.
-
 // In this section, We will make the countdown chant. What is this? It is literally counting down view until Christmas!
-// Reference 1: https://medium.com/@khwsc1/creating-timer-app-with-react-js-part-1-401d4af6e4fb
-// Reference 2: http://www.kristin-baumann.com/tech/react-countdown/
 
 
 // ## 2.1 What is props and when we have to use it? ##
@@ -218,7 +212,100 @@
 
 // ## 2.3 Let's combine props and state together! ##
 
+// Okay. In our code, the button change the deadline on the heading and input field saves the value into typedDeadline state object. 
+// Now What you have to do is showing your input value on the heading text. We need to change our code a bit.
+
+// How? easy. Just have your input value changed to the deadline when you click the button.
+
+// Fron this part, when changeDeadline method is called by button, set the state object of deadline to the typeddeadline object. 
+
+// This is our current code.
+// changeDeadline() {
+//     this.setState({deadline: 'September 3rd, my birthday!'});
+//     console.log('state', this.state);
+// }
+
+// 1. Finish this by filling blanky. 
+// Hint: What is the new state object's name besides of deadline?
+
+// changeDeadline() {
+//     this.setState({deadline: this.state._______________ });
+// }
+
+// What you see now? Is your heading changed to what you typed? Good!
+
+// Now, we are going to use our clock component again. Comment our clock component and change some parts to use it. 
+// Do you remember that we implemented our clock component into our app component at the very beginning of step2?
+// Let's bring that up again. 
+
+// In the App component, 
+
+// <div className="App">
+//         <div className="App-title">Countdown to {this.state.deadline}</div>
+//         <div>
+//           <div className="Clock-days">14 days</div>
+//           <div className="Clock-hours">30 hours</div>
+//           <div className="Clock-minutes">15 minutes</div>
+//           <div className="Clock-seconds">20 seconds</div>
+//         </div>
+//         <div>
+//             <input placeholder="new date"
+//                    onChange={event => this.setState({ typedDeadline: event.target.value})}/>
+//             <button onClick={() => this.changeDeadline()}>Submit</button>
+//         </div>
+// </div>
+
+// You see that the clock countdown section looks a bit...too wordy. We want them into our Clock component separately.
+// The Clock component has those part so we don't need to repeat on App component.  
+
+// 2. Change this code by filling up blanky. 
+// <div className="App">
+//         <div className="App-title">Countdown to {this.state.deadline}</div>
+//         <__________/>
+//         <div>
+//             <input placeholder="new date"
+//                    onChange={event => this.setState({ typedDeadline: event.target.value})}/>
+//             <button onClick={() => this.changeDeadline()}>Submit</button>
+//         </div>
+// </div>
+
+// Previously, we passed props via attributes on <Clock />. At this time, we will restruct our data same as App component. 
+// Build the constructor in Clock component same as what we did on App component. 
+// constructor(props) {
+//     super(props);
+//     this.state = {
+//     }
+//   }
+
+// This is the basic form of constructor in ES6. Now, add the state objects in it. 
+// constructor(props) {
+//     super(props);
+//     this.state = {
+            // days:0,
+            // hours: 0, 
+            // minutes:0, 
+            // seconds:0
+//     }
+//   }
+// Now we have initial objects of our times. It still doesn't seem right though. None of time forms are showing. 
+
+// 3. fix the code to show our initial state objects by filling up blankies
+// return (
+//     <div>
+//       <div className="Clock-days">{this.____.days} days</div>
+//       <div className="Clock-hours">{this._____.hours} hours</div>
+//       <div className="Clock-minutes">{this._____.minutes} minutes</div>
+//       <div className="Clock-seconds">{this._______.seconds} seconds</div>
+//     </div>
+//   )
 
 
 
 
+
+// The best tutorial you can find is FaceBook API. 
+// This website has everything that you seek for. 
+// https://facebook.github.io/react/tutorial/tutorial.html#overview
+
+// Reference 1: https://medium.com/@khwsc1/creating-timer-app-with-react-js-part-1-401d4af6e4fb
+// Reference 2: http://www.kristin-baumann.com/tech/react-countdown/
