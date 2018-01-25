@@ -38,7 +38,8 @@
 // Unmounting
 // - componentWillUnmount() lets you unbind and detach any event listeners or do other cleanup work before the component is unmounted. 
 
-
+// For more details, here is the official document. 
+// https://facebook.github.io/react/docs/react-component.html
 
 // So far this is how our clock countdown done. Hope you get the rough picture about a very basic React. 
 // Below is the result codepen after applying all the codes in a one place.
